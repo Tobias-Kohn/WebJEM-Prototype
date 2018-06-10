@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <title>JEM online</title>
+    <link rel="stylesheet" href="stylesheets/ibm.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/demo.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <!-- polyfill -->
+    <script type="text/javascript" src="javascripts/inc/shim/Base64.js"></script>
+    <script type="text/javascript" src="javascripts/inc/shim/Base64binary.js"></script>
+    <script type="text/javascript" src="javascripts/inc/shim/WebAudioAPI.js"></script>
+    <!-- midi.js package -->
+    <script type="text/javascript" src="javascripts/js/midi/audioDetect.js"></script>
+    <script type="text/javascript" src="javascripts/js/midi/gm.js"></script>
+    <script type="text/javascript" src="javascripts/js/midi/loader.js"></script>
+    <script type="text/javascript" src="javascripts/js/midi/plugin.audiotag.js"></script>
+    <script type="text/javascript" src="javascripts/js/midi/plugin.webaudio.js"></script>
+    <script type="text/javascript" src="javascripts/js/midi/plugin.webmidi.js"></script>
+    <!-- utils -->
+    <script type="text/javascript" src="javascripts/js/util/dom_request_xhr.js"></script>
+    <script type="text/javascript" src="javascripts/js/util/dom_request_script.js"></script>
+    <!-- Skulpt -->
+    <script type="text/javascript" src="javascripts/skulpt/skulpt.min.js"></script>
+    <script type="text/javascript" src="javascripts/skulpt/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="javascripts/skulpt/processing.min.js"></script>
+    <!-- JEM/TigerJython -->
+    <script type="text/javascript" src="javascripts/jem/tpyparser.js"></script>
+    <script type="text/javascript" src="javascripts/jem/jem-music.js"></script>
+    <script type="text/javascript" src="javascripts/jem/midi-lib.js"></script>
+    <script type="text/javascript" src="javascripts/jem/webjem.js"></script>
+    <script type="text/javascript" src="javascripts/demorun.js"></script>
+</head><body>
+<header class="bluemix-global-header">
+    <div class="bluemix-masthead">
+        <div class="bluemix-branding">
+            <a href="index.html"><span class="bluemix-product-title">JEM</span> @Bluemix</a>
+        </div>
+    </div>
+</header>
+<main class="main">
+<div class="output-container">
+<div id="canvas-container">
+<div id="mycanvas" style="display: none">
+</div></div>
+<div id="output-wrapper">
+<pre id="output" style="max-height: 36vh;"></pre>
+</div>
+</div>
+<script>
+var midiInitTime;
+var textFromParent;
+var outputFunction;
+var _isLoadingInstrument = false;
+window.onload = function () {
+    console.log("Starting...");
+	jythonmusic.MidiPlayer().initialize();
+	midiInitTime = Date.now();
+    console.log("Loading Midi-Plugins");
+    MIDI.loadPlugin({
+        soundfontUrl: "soundfont/",
+        instrument: "acoustic_grand_piano",
+        onprogress: function(state, progress) {
+            outf('Loading MIDI sounds for instrument...<br/>');
+        },
+        onsuccess: function() {
+            console.log("MIDI Loaded");
+            MIDI.setVolume(0, 127);
+        }
+    });
+	jythonmusic.MidiPlayer().setOnprogress(function(text, percent, instrument) {
+	    if (instrument) {
+	        outf("Loading MIDI sounds for instrument ");
+	        outf(instrument);
+	        outf("...");
+	        _isLoadingInstrument = true;
+	    } else
+	    if (_isLoadingInstrument) {
+	        outf("done<br/>");
+	        _isLoadingInstrument = false;
+	    }
+	});
+};
+</script></main>
+</body></html>

@@ -1,0 +1,89 @@
+html {
+	background-color: gray;
+}
+body {
+	width: 1000px;
+	margin: auto;
+	background-color: white;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	min-height: 100vh;
+	padding-bottom: 20px;
+}
+#content {
+	margin: auto;
+	width: 90%;
+}
+#nav {
+	background: #222;
+	background: -moz-linear-gradient(#252525, #0a0a0a);
+	background: -o-linear-gradient(#252525, #0a0a0a);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#252525, #0a0a0a);
+	padding: 8px;
+}
+#editor { 
+	width: 50%;
+	min-height: 200px;
+	height: 60vh;
+	font: "Courier New", Monospace;
+	float: left;
+}
+#mycanvas {
+	float: right;
+	background-color: #eee;
+	width: 50%;
+	height: 60vh;
+	overflow: scroll;
+}
+#mycanvas-gl-canvas {
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+#output {
+	clear: both;
+	background-color: black;
+	color: #888;
+	font: "Courier New", Monospace;
+	min-height: 100px;
+	max-height: 20vh;
+	overflow: scroll;
+}
+#run_label {
+	color: white;
+	margin-left: 50px;
+}
+#error-tooltip {
+	position: absolute;
+	z-index: 100;
+	background: #990000;
+	border: 1px solid black;
+	padding: 2px;
+}
+.powered-by-firepad {
+  display: none;
+}
+a {
+	color: #333;
+}
+a:hover {
+	color: blue;
+}
+.btn {
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 4px;
+	margin: 4px;
+	border: 1px solid white;
+}
+.btn:hover {
+	color: #fda;
+	background-color: black;
+}
+
+.error {
+	position: absolute;
+	z-index: 20;
+	background: #771111;
+}

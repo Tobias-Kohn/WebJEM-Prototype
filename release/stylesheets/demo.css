@@ -1,0 +1,171 @@
+.infotext {
+    font-size: 75%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#nav {
+	background: #F0F0F0;
+	padding: 8px;
+	border-bottom: 2px solid #666;
+}
+#editor-wrapper {
+}
+#welcome-wrapper {
+    display: none;
+    background-color: #f8f8ff;
+    color: black;
+    padding: 8pt;
+    padding-bottom: 36px;
+    margin-bottom: 24px;
+}
+#welcome-wrapper img {
+    max-width: 50%;
+    float: right;
+}
+#welcome-wrapper a {
+    color: #006;
+}
+#welcome-wrapper a:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+#welcome-wrapper strong {
+    color: #009;
+    font-size: 128%;
+    font-style: italic;
+}
+.alt-head {
+    padding-bottom: 36px;
+    text-align: center;
+}
+#edit-wrapper {
+    width: 100%;
+    height: 78vh;
+    margin-bottom: 4px;
+}
+#editor {
+	width: 100%;
+	min-height: 200px;
+	height: 60vh;
+	font: "Courier New", Monospace;
+}
+#mycanvas {
+	background-color: #eee;
+	width: 100%;
+	height: 100%;
+	overflow: auto; // scroll;
+}
+#mycanvas-gl-canvas {
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+#canvas-container {
+    min-height: 50vh;
+}
+#output {
+	background-color: white;
+	color: #003;
+	font: "Courier New", Monospace;
+	min-height: 100px;
+	max-height: 16vh;
+	overflow: scroll;
+	border-top: 1px solid #333;
+	z-index: 1000;
+}
+#run_label {
+	color: white;
+	margin-left: 50px;
+}
+#error-tooltip {
+	position: absolute;
+	z-index: 100;
+	background: #FFDFDF; // #990000;
+	color: black;
+	border: 1px solid #CF0000;
+	padding: 2px;
+}
+#file-name {
+    width: 30%;
+    min-width: 200px;
+}
+#learn-more-link {
+    font-size: 90%;
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    display: none;
+}
+#learn-more-link:hover {
+    color: #006;
+    text-decoration: underline;
+}
+a {
+	color: silver;
+}
+a:hover {
+	color: white;
+}
+.btn {
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 4px;
+	margin: 4px;
+	border: 1px solid white;
+}
+.btn:hover {
+	color: #fda;
+	background-color: black;
+}
+
+.btnimg {
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 4px;
+	margin: 1px;
+	border: 1px solid #666;
+	border-radius: 3px;
+}
+.btnimg:hover {
+    background-color: #666;
+	border: 1px solid black;
+}
+
+.btngroup {
+    margin: 4px;
+}
+
+img {
+	vertical-align: middle;
+}
+
+.error {
+	position: absolute;
+	z-index: 20;
+	background: #FFAAAA;
+}
+
+.ace_gutter-layer {
+    background-color: #FFDDAA;
+    border-right: 1px solid black;
+}
+
+[tooltip]:before {
+  position: absolute;
+  content: attr(tooltip);
+  background-color: black;
+  color: white;
+  opacity: 0;
+  z-index: 10000;
+}
+[tooltip]:hover:before {
+  opacity : 1;
+  z-index: 10000;
+}
+[tooltip]:not([tooltip-persistent]):before {
+    pointer-events: none;
+}

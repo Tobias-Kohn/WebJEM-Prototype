@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <title>Web-JEM (demo)</title>
+    <link rel="stylesheet" href="stylesheets/ibm.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/demo.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="javascripts/demo.js"></script>
+    <script src="javascripts/fileSaver.min.js"></script>
+    <!-- ACE -->
+    <script type="text/javascript" src="javascripts/ace/ace.js" charset="utf-8"></script>
+</head><body>
+<header class="bluemix-global-header">
+    <div class="bluemix-masthead">
+        <div class="bluemix-branding">
+            <a href="index.html"><span class="bluemix-product-title">JEM</span> @Bluemix</a>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <header class="action-bar">
+        <div class="docked-nav-bar">
+            <div class="nav-bar" id="nav-bar">
+                <div class="nav-expandable">
+                    <div class="nav-title">Examples</div>
+                    <div class="nav-contents">
+                        <div class="nav-item">
+                            <div class="nav-item-container" id="welcome" onclick="showWelcome();">
+                                <span class="nav-item-label" tooltip="Welcome">Welcome</span>
+                            </div>
+                        </div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-2-elements-of-music-and-code" onclick="selectWorkspace('ch-2-elements-of-music-and-code');">
+        <span class="nav-item-label" tooltip="Chapter 2">Chapter 2</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-2-elements-of-music-and-code-subitems">
+        <div class="nav-subitem" id="2.1.playNote-docItem" chapter="ch-2-elements-of-music-and-code"
+     onclick="selectDocument('2.1.playNote', 'playNote.py');" tooltip="playNote.py">
+    playNote.py
+</div>
+<div class="nav-subitem" id="2.2.findOctave-docItem" chapter="ch-2-elements-of-music-and-code"
+     onclick="selectDocument('2.2.findOctave', 'findPitchOctave.py');" tooltip="findPitchOctave.py">
+    findPitchOctave.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-3-organization-and-data" onclick="selectWorkspace('ch-3-organization-and-data');">
+        <span class="nav-item-label" tooltip="Chapter 3">Chapter 3</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-3-organization-and-data-subitems">
+        <div class="nav-subitem" id="3.1.furElise-docItem" chapter="ch-3-organization-and-data"
+     onclick="selectDocument('3.1.furElise', 'furElise.py');" tooltip="furElise.py">
+    furElise.py
+</div>
+<div class="nav-subitem" id="3.2.axelF-docItem" chapter="ch-3-organization-and-data"
+     onclick="selectDocument('3.2.axelF', 'axelF.py');" tooltip="axelF.py">
+    axelF.py
+</div>
+<div class="nav-subitem" id="3.3.theWayItIs-docItem" chapter="ch-3-organization-and-data"
+     onclick="selectDocument('3.3.theWayItIs', 'theWayItIs.py');" tooltip="theWayItIs.py">
+    theWayItIs.py
+</div>
+<div class="nav-subitem" id="3.4.changes-docItem" chapter="ch-3-organization-and-data"
+     onclick="selectDocument('3.4.changes', 'changesByTupac.py');" tooltip="changesByTupac.py">
+    changesByTupac.py
+</div>
+<div class="nav-subitem" id="3.5.stringQuartet-docItem" chapter="ch-3-organization-and-data"
+     onclick="selectDocument('3.5.stringQuartet', 'stringQuartet.py');" tooltip="stringQuartet.py">
+    stringQuartet.py
+</div>
+<div class="nav-subitem" id="3.6.autumnLeaves-docItem" chapter="ch-3-organization-and-data"
+     onclick="selectDocument('3.6.autumnLeaves', 'autumnLeaves.py');" tooltip="autumnLeaves.py">
+    autumnLeaves.py
+</div>
+<div class="nav-subitem" id="3.15.smokeOnWater-docItem" chapter="ch-3-organization-and-data"
+     onclick="selectDocument('3.15.smokeOnWater', 'DeepPurple.SmokeOnTheWater.py');" tooltip="DeepPurple.SmokeOnTheWater.py">
+    DeepPurple.SmokeOnTheWater.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-4-transformation-and-process" onclick="selectWorkspace('ch-4-transformation-and-process');">
+        <span class="nav-item-label" tooltip="Chapter 4">Chapter 4</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-4-transformation-and-process-subitems">
+        <div class="nav-subitem" id="4.1.pianoPhase-docItem" chapter="ch-4-transformation-and-process"
+     onclick="selectDocument('4.1.pianoPhase', 'pianoPhase.py');" tooltip="pianoPhase.py">
+    pianoPhase.py
+</div>
+<div class="nav-subitem" id="4.2.rowYourBoat-docItem" chapter="ch-4-transformation-and-process"
+     onclick="selectDocument('4.2.rowYourBoat', 'rowYourBoat.py');" tooltip="rowYourBoat.py">
+    rowYourBoat.py
+</div>
+<div class="nav-subitem" id="4.3.goldbergCanon-docItem" chapter="ch-4-transformation-and-process"
+     onclick="selectDocument('4.3.goldbergCanon', 'JS_Bach.Canon_1.GoldbergGround.BWV1087.py');" tooltip="JS_Bach.Canon_1.GoldbergGround.BWV1087.py">
+    JS_Bach.Canon_1.GoldbergGround.BWV1087.py
+</div>
+<div class="nav-subitem" id="4.4.triasHarmonicaCanon-docItem" chapter="ch-4-transformation-and-process"
+     onclick="selectDocument('4.4.triasHarmonicaCanon', 'JS_Bach.Canon.TriasHarmonica.BWV1072.py');" tooltip="JS_Bach.Canon.TriasHarmonica.BWV1072.py">
+    JS_Bach.Canon.TriasHarmonica.BWV1072.py
+</div>
+<div class="nav-subitem" id="4.5.cantusMemoriam-docItem" chapter="ch-4-transformation-and-process"
+     onclick="selectDocument('4.5.cantusMemoriam', 'ArvoPart.CantusInMemoriam.py');" tooltip="ArvoPart.CantusInMemoriam.py">
+    ArvoPart.CantusInMemoriam.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-5-iteration-and-lists" onclick="selectWorkspace('ch-5-iteration-and-lists');">
+        <span class="nav-item-label" tooltip="Chapter 5">Chapter 5</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-5-iteration-and-lists-subitems">
+        <div class="nav-subitem" id="5.1.arpeggiator-docItem" chapter="ch-5-iteration-and-lists"
+     onclick="selectDocument('5.1.arpeggiator', 'arpeggiator1.py');" tooltip="arpeggiator1.py">
+    arpeggiator1.py
+</div>
+<div class="nav-subitem" id="5.2.arpeggiator-docItem" chapter="ch-5-iteration-and-lists"
+     onclick="selectDocument('5.2.arpeggiator', 'arpeggiator2.py');" tooltip="arpeggiator2.py">
+    arpeggiator2.py
+</div>
+<div class="nav-subitem" id="5.3.scaleTutor-docItem" chapter="ch-5-iteration-and-lists"
+     onclick="selectDocument('5.3.scaleTutor', 'scaleTutor.py');" tooltip="scaleTutor.py">
+    scaleTutor.py
+</div>
+<div class="nav-subitem" id="5.4.pianoRollGenerator-docItem" chapter="ch-5-iteration-and-lists"
+     onclick="selectDocument('5.4.pianoRollGenerator', 'pianoRollGenerator.py');" tooltip="pianoRollGenerator.py">
+    pianoRollGenerator.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-6-randomness-and-choices" onclick="selectWorkspace('ch-6-randomness-and-choices');">
+        <span class="nav-item-label" tooltip="Chapter 6">Chapter 6</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-6-randomness-and-choices-subitems">
+        <div class="nav-subitem" id="6.1.mozartWuerfelspiel-docItem" chapter="ch-6-randomness-and-choices"
+     onclick="selectDocument('6.1.mozartWuerfelspiel', 'Mozart.MusikalischesWurfelspiel.py');" tooltip="Mozart.MusikalischesWurfelspiel.py">
+    Mozart.MusikalischesWurfelspiel.py
+</div>
+<div class="nav-subitem" id="6.2.structuresPourDeuxChances-docItem" chapter="ch-6-randomness-and-choices"
+     onclick="selectDocument('6.2.structuresPourDeuxChances', 'PierreCage.StructuresPourDeuxChances.py');" tooltip="PierreCage.StructuresPourDeuxChances.py">
+    PierreCage.StructuresPourDeuxChances.py
+</div>
+<div class="nav-subitem" id="6.4.windChimes-docItem" chapter="ch-6-randomness-and-choices"
+     onclick="selectDocument('6.4.windChimes', 'windChimes.py');" tooltip="windChimes.py">
+    windChimes.py
+</div>
+<div class="nav-subitem" id="6.5.pentatonicMelody-docItem" chapter="ch-6-randomness-and-choices"
+     onclick="selectDocument('6.5.pentatonicMelody', 'pentatonicMelody.py');" tooltip="pentatonicMelody.py">
+    pentatonicMelody.py
+</div>
+<div class="nav-subitem" id="6.6.brownianMotion-docItem" chapter="ch-6-randomness-and-choices"
+     onclick="selectDocument('6.6.brownianMotion', 'brownianMelody.py');" tooltip="brownianMelody.py">
+    brownianMelody.py
+</div>
+<div class="nav-subitem" id="6.7.thowingDice-docItem" chapter="ch-6-randomness-and-choices"
+     onclick="selectDocument('6.7.thowingDice', 'throwingDice.py');" tooltip="throwingDice.py">
+    throwingDice.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-7-sonification-and-big-data" onclick="selectWorkspace('ch-7-sonification-and-big-data');">
+        <span class="nav-item-label" tooltip="Chapter 7">Chapter 7</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-7-sonification-and-big-data-subitems">
+        <div class="nav-subitem" id="7.1.sonifyPlanets.py-docItem" chapter="ch-7-sonification-and-big-data"
+     onclick="selectDocument('7.1.sonifyPlanets.py', 'harmonicesMundi.py');" tooltip="harmonicesMundi.py">
+    harmonicesMundi.py
+</div>
+<div class="nav-subitem" id="7.2.musicFromText-docItem" chapter="ch-7-sonification-and-big-data"
+     onclick="selectDocument('7.2.musicFromText', 'textMusic.py');" tooltip="textMusic.py">
+    textMusic.py
+</div>
+<div class="nav-subitem" id="7.5.sonifyingImages-docItem" chapter="ch-7-sonification-and-big-data"
+     onclick="selectDocument('7.5.sonifyingImages', 'sonifyImage.py');" tooltip="sonifyImage.py">
+    sonifyImage.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-8-interactive-musical-instruments" onclick="selectWorkspace('ch-8-interactive-musical-instruments');">
+        <span class="nav-item-label" tooltip="Chapter 8">Chapter 8</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-8-interactive-musical-instruments-subitems">
+        <div class="nav-subitem" id="8.1.randomCircles-docItem" chapter="ch-8-interactive-musical-instruments"
+     onclick="selectDocument('8.1.randomCircles', 'randomCircles.py');" tooltip="randomCircles.py">
+    randomCircles.py
+</div>
+<div class="nav-subitem" id="8.2.simpleButtonInstrument-docItem" chapter="ch-8-interactive-musical-instruments"
+     onclick="selectDocument('8.2.simpleButtonInstrument', 'simpleButtonInstrument.py');" tooltip="simpleButtonInstrument.py">
+    simpleButtonInstrument.py
+</div>
+<div class="nav-subitem" id="8.4.simpleCircleInstrument-docItem" chapter="ch-8-interactive-musical-instruments"
+     onclick="selectDocument('8.4.simpleCircleInstrument', 'simpleCircleInstrument.py');" tooltip="simpleCircleInstrument.py">
+    simpleCircleInstrument.py
+</div>
+<div class="nav-subitem" id="8.5.RGBDisplay-docItem" chapter="ch-8-interactive-musical-instruments"
+     onclick="selectDocument('8.5.RGBDisplay', 'RGB_Display.py');" tooltip="RGB_Display.py">
+    RGB_Display.py
+</div>
+<div class="nav-subitem" id="8.6.pianoSimple-docItem" chapter="ch-8-interactive-musical-instruments"
+     onclick="selectDocument('8.6.pianoSimple', 'iPianoSimple.py');" tooltip="iPianoSimple.py">
+    iPianoSimple.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-9-making-connections" onclick="selectWorkspace('ch-9-making-connections');">
+        <span class="nav-item-label" tooltip="Chapter 9">Chapter 9</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-9-making-connections-subitems">
+        <div class="nav-subitem" id="9.1.midiInput-docItem" chapter="ch-9-making-connections"
+     onclick="selectDocument('9.1.midiInput', 'midiIn1.py');" tooltip="midiIn1.py">
+    midiIn1.py
+</div>
+<div class="nav-subitem" id="9.2.midiOutput-docItem" chapter="ch-9-making-connections"
+     onclick="selectDocument('9.2.midiOutput', 'midiOut.py');" tooltip="midiOut.py">
+    midiOut.py
+</div>
+<div class="nav-subitem" id="9.7.randomCirclesMidiInput-docItem" chapter="ch-9-making-connections"
+     onclick="selectDocument('9.7.randomCirclesMidiInput', 'randomCirclesThroughMidiInput.py');" tooltip="randomCirclesThroughMidiInput.py">
+    randomCirclesThroughMidiInput.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-10-music-number-and-nature" onclick="selectWorkspace('ch-10-music-number-and-nature');">
+        <span class="nav-item-label" tooltip="Chapter 10">Chapter 10</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-10-music-number-and-nature-subitems">
+        <div class="nav-subitem" id="10.1.sineMelody-docItem" chapter="ch-10-music-number-and-nature"
+     onclick="selectDocument('10.1.sineMelody', 'sineMelody.py');" tooltip="sineMelody.py">
+    sineMelody.py
+</div>
+<div class="nav-subitem" id="10.2.harmonograph.py-docItem" chapter="ch-10-music-number-and-nature"
+     onclick="selectDocument('10.2.harmonograph.py', 'harmonographLateral.py');" tooltip="harmonographLateral.py">
+    harmonographLateral.py
+</div>
+<div class="nav-subitem" id="10.3.harmonograph.py-docItem" chapter="ch-10-music-number-and-nature"
+     onclick="selectDocument('10.3.harmonograph.py', 'harmonographRotary.py');" tooltip="harmonographRotary.py">
+    harmonographRotary.py
+</div>
+<div class="nav-subitem" id="10.4.keplerHarmony.py-docItem" chapter="ch-10-music-number-and-nature"
+     onclick="selectDocument('10.4.keplerHarmony.py', 'harmonicesMundiRevisisted.py');" tooltip="harmonicesMundiRevisisted.py">
+    harmonicesMundiRevisisted.py
+</div>
+<div class="nav-subitem" id="10.6.musicalSphere-docItem" chapter="ch-10-music-number-and-nature"
+     onclick="selectDocument('10.6.musicalSphere', 'musicalSphere.py');" tooltip="musicalSphere.py">
+    musicalSphere.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-11-exploring-powerful-ideas" onclick="selectWorkspace('ch-11-exploring-powerful-ideas');">
+        <span class="nav-item-label" tooltip="Chapter 11">Chapter 11</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-11-exploring-powerful-ideas-subitems">
+        <div class="nav-subitem" id="11.1.fibonacci-docItem" chapter="ch-11-exploring-powerful-ideas"
+     onclick="selectDocument('11.1.fibonacci', 'fibonacci.py');" tooltip="fibonacci.py">
+    fibonacci.py
+</div>
+<div class="nav-subitem" id="11.2.goldenTree-docItem" chapter="ch-11-exploring-powerful-ideas"
+     onclick="selectDocument('11.2.goldenTree', 'goldenTree.py');" tooltip="goldenTree.py">
+    goldenTree.py
+</div>
+<div class="nav-subitem" id="11.3.sierpinski-docItem" chapter="ch-11-exploring-powerful-ideas"
+     onclick="selectDocument('11.3.sierpinski', 'sierpinskiTriangle.py');" tooltip="sierpinskiTriangle.py">
+    sierpinskiTriangle.py
+</div>
+    </div>
+</div>
+<div class="nav-item">
+    <div class="nav-item-container" id="ch-A" onclick="selectWorkspace('ch-A');">
+        <span class="nav-item-label" tooltip="Additional Examples">Additional Examples</span>
+    </div>
+    <div class="nav-subitem-container" id="ch-A-subitems">
+		<div class="nav-subitem" id="0.1.turtleSquare-docItem" chapter="ch-A" onclick="selectDocument('0.1.turtleSquare', 'turtleSquare.py');" tooltip="turtleSquare.py">
+			turtleSquare.py
+		</div>
+		<div class="nav-subitem" id="B.1.processing1-docItem" chapter="ch-A" onclick="selectDocument('B.1.processing1', 'skulptProcessing1.py');" tooltip="">
+			skulptProcessing1.py
+		</div>
+		<div class="nav-subitem" id="B.2.processing2-docItem" chapter="ch-A" onclick="selectDocument('B.2.processing2', 'skulptProcessing2.py');" tooltip="">
+			skulptProcessing2.py
+		</div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="action-title">
+            <span>JEM (Jython Environment for Music) Online</span>
+        </div>
+    </header>
+    <div class="container">
+<div id="welcome-wrapper">
+<img src="images/screenshots_1.png">
+<p class="alt-head"><strong>Unleash your musical creativity and gain easy access to IBMWatson through Online JEM.</strong></p>
+<h2>Overview</h2>
+<p>The JEM / Bluemix interface provides an easy entry for beginning students to the power of Bluemix. Through progressive
+disclosure implemented via shims (e.g., for IBM Watson artificial intelligence), beginning students may be introduced to
+available Bluemix functionality, while hiding unnecessary complexity in the regular Bluemix UI and standard APIs.</p>
+<h2>Check out some Examples!</h2>
+<p>Here are a few examples to try and check out:</p>
+<ul>
+    <li><a href="?id=3.1.furElise">Play Beethoven's <em>für Elise</em>.</a></li>
+    <li><a href="?id=7.5.sonifyingImages"><em>Sonify</em> an image.</a></li>
+    <li><a href="?id=8.6.pianoSimple">Create a simple <em>virtual piano</em>.</a></li>
+    <li><a href="?id=11.3.sierpinski">Draw the famous <em>Sierpinski triangle</em>.</a></li>
+</ul>
+<p>Additional examples are organized in chapters from the introductory textbook,
+<a href="http://jythonmusic.org">"Making Music with Computers: Creative Programming in Python"</a> by Bill Manaris.</p>
+<h2>Creative Programming for CS0/CS1</h2>
+<p><a href="http://jythonmusic.org">JythonMusic</a> is an open source environment for music making and creative
+programming activities written in Python. It is intended for musicians and programmers, of all levels and backgrounds.
+It provides libraries for music making, image manipulation, building graphical user interfaces (GUIs), and connecting
+to external MIDI devices, among other functionality. JythonMusic is fully embedded in JEM (Jython Environment for
+Music), a Java-based editor application. As part of this project, we explored porting JEM into Bluemix to provide
+an easy entry point and increased usability for CS0/CS1-level programmers using Bluemix for creative activities.</p>
+<h2>Progressive Disclosure</h2>
+<p>Bluemix has been developed with the software engineering
+professional in mind, so its user interface reflects that. However,
+when dealing with less-experienced audiences, such as students
+in high school / first-year programming in college, a new, more
+streamlined experience is needed. By utilizing the JEM
+environment and existing libraries, together with shims
+(lightweight APIs) for Watson artificial intelligence and other
+functionality, beginning students may be introduced to available
+Bluemix functionality, while hiding unnecessary complexity (in
+the regular API and regular UI).</p>
+<h2>Credits</h2>
+<p>JEM / Bluemix is funded in part by IBM. JythonMusic is funded in part by NSF. Prototype includes code from
+<a href="http://jythonmusic.org/">JythonMusic</a>, jMusic,
+<a href="http://www.skulpt.org/">Skulpt</a>, and
+<a href="https://ace.c9.io/#nav=about">ACE</a>. 
+Prototype by <a href="https://tobiaskohn.ch/">Tobias Kohn</a> and 
+<a href="http://compsci.cofc.edu/about/faculty-staff-listing/manaris-bill.php">Bill Manaris</a>.</p>
+</div>
+<div id="editor-wrapper">
+<div id="nav">
+    <span class="btngroup">
+    <a class="btnimg" onclick="runAll()" title="Run"><img src="images/btnimg_run.png"></a>
+    <a class="btnimg" onclick="stopAll()" title="Stop"><img src="images/btnimg_abort.png"></a>
+    </span>
+    <span class="btngroup">
+    <a class="btnimg" onclick="newDocument()" title="New"><img src="images/btnimg_new.png"></a>
+    <a class="btnimg" onclick="saveDocument()" title="Save"><img src="images/btnimg_save.png"></a>
+    </span>
+    <span id="run_label"></span>
+    <input type="text" id="file-name" placeholder="program name" value="">
+    <a id="learn-more-link" href="https://jythonmusic.me/" target="_blank">Learn more...</a>
+</div>
+<div id="edit-wrapper">
+    <div id="editor-wrapper">
+    <div id="editor"></div>
+    </div>
+    <div id="output-wrapper">
+    <pre id="output">Online-Jem [March/17/2017]</pre>
+    </div>
+</div>
+<p class="infotext">
+Funded in part by IBM and NSF. Runs on <a href="https://www.ibm.com/cloud-computing/bluemix/">IBM Bluemix</a>.
+Includes components from
+<a href="http://jythonmusic.org/">JythonMusic</a>,
+<a href="http://www.skulpt.org/">Skulpt</a>, and
+<a href="https://ace.c9.io/#nav=about">ACE</a>.
+Prototype by Tobias Kohn and Bill Manaris.</p>
+</div>
+<script>
+var _moreInfoUrls = {
+	'3.1.furElise': 'https://jythonmusic.me/ch-3-organization-and-data/#Play-a-simple-musical-theme',
+	'3.2.axelF': 'https://jythonmusic.me/ch-3-organization-and-data/#setting-the-instrument-and-tempo',
+	'3.3.theWayItIs': 'https://jythonmusic.me/ch-3-organization-and-data/#play-a-chord-progression',
+	'3.4.changes': 'https://jythonmusic.me/ch-3-organization-and-data/#play-a-chord-progression',
+	'3.5.stringQuartet': 'https://jythonmusic.me/ch-3-organization-and-data/#various-melodic-lines',
+	'3.6.autumnLeaves': 'https://jythonmusic.me/ch-3-organization-and-data/#Autumn-Leaves',
+	'3.15.smokeOnWater': 'https://jythonmusic.me/ch-3-organization-and-data/#smoke-on-the-water',
+	'4.1.pianoPhase': 'https://jythonmusic.me/ch-4-transformation-and-process/#Create-Steve-Reich_s-piece',
+	'4.2.rowYourBoat': 'https://jythonmusic.me/ch-4-transformation-and-process/#Create-a-simple-musical-canon',
+	'4.3.goldbergCanon': 'https://jythonmusic.me/ch-4-transformation-and-process/#Create-J.S.-Bach_s-Canon-No.-1-on-the-Goldberg-Ground',
+	'4.4.triasHarmonicaCanon': 'https://jythonmusic.me/ch-4-transformation-and-process/#Create-J.S.-Bach_s-Trias-Harmonica-canon',
+	'4.5.cantusMemoriam': 'https://jythonmusic.me/ch-4-transformation-and-process/#Create-Arvo-Part_s-Cantus-in-Memoriam-Benjamin-Britten',
+	'5.1.arpeggiator': 'https://jythonmusic.me/ch-5-iteration-and-lists/#Play-an-arpeggio-pattern-using-absolute-pitches',
+	'5.2.arpeggiator': 'https://jythonmusic.me/ch-5-iteration-and-lists/#Play-an-arpeggio-pattern-using-relative-pitches',
+	'5.3.scaleTutor': 'https://jythonmusic.me/ch-5-iteration-and-lists/#Build-a-Scale-Tutor',
+	'5.4.pianoRollGenerator': 'https://jythonmusic.me/ch-5-iteration-and-lists/#Generate-a-piano-roll-interactively',
+	'6.2.structuresPourDeuxChances': 'https://jythonmusic.me/ch-6-randomness-and-choices/#Creating-Pierre-Cage_s-Structures-pour-deux-Chances',
+	'6.4.windChimes': 'https://jythonmusic.me/ch-6-randomness-and-choices/#Harnessing-or-sieving-randomness-wind-chimes',
+	'6.6.brownianMotion': 'https://jythonmusic.me/ch-6-randomness-and-choices/#Music-from-Brownian-motion',
+	'6.7.thowingDice': 'https://jythonmusic.me/ch-6-randomness-and-choices/#Throwing-dice',
+	'7.1.sonifyPlanets.py': 'https://jythonmusic.me/ch-7-sonification-and-big-data/#Sonifying-planetary-data',
+	'7.2.musicFromText': 'https://jythonmusic.me/ch-7-sonification-and-big-data/#Making-music-from-text',
+	'7.5.sonifyingImages': 'https://jythonmusic.me/ch-7-sonification-and-big-data/#Sonifying-images',
+	'8.1.randomCircles': 'https://jythonmusic.me/ch-8-interactive-musical-instruments/#Random-circles-on-a-Display',
+	'8.2.simpleButtonInstrument': 'https://jythonmusic.me/ch-8-interactive-musical-instruments/#A-simple-musical-instrument',
+	'8.4.simpleCircleInstrument': 'https://jythonmusic.me/ch-8-interactive-musical-instruments/#Drawing-musical-circles',
+	'8.5.RGBDisplay': 'https://jythonmusic.me/ch-8-interactive-musical-instruments/#Changing-the-background-color-interactively',
+	'8.6.pianoSimple': 'https://jythonmusic.me/ch-8-interactive-musical-instruments/#Creating-a-virtual-piano',
+	'9.1.midiInput': 'https://jythonmusic.me/ch-9-making-connections/#When-MIDI-note-is-received-print-a-message',
+	'9.2.midiOutput': 'https://jythonmusic.me/ch-9-making-connections/#How-to-play-notes-on-external-MIDI-synthesizer',
+	'10.1.sineMelody': 'https://jythonmusic.me/ch-10-music-number-and-nature/#Making-music-from-math-curves',
+	'10.2.harmonograph.py': 'https://jythonmusic.me/ch-10-music-number-and-nature/#Simulating-a-lateral-harmonograph',
+	'10.3.harmonograph.py': 'https://jythonmusic.me/ch-10-music-number-and-nature/#Simulating-a-rotary-harmonograph',
+	'10.4.keplerHarmony.py': 'https://jythonmusic.me/ch-10-music-number-and-nature/#Kepler_s-Harmony-of-the-World',
+	'B.1.processing1': 'https://jythonmusic.me/None/#http://www.skulpt.org/static/proctest.html',
+	'B.2.processing2': 'https://jythonmusic.me/None/#http://www.skulpt.org/static/proctest.html',
+	'A.1.languageTranslator': 'https://console.ng.bluemix.net/catalog/services/language-translator/',
+	'A.2.visualRecognition': 'https://console.ng.bluemix.net/catalog/services/visual-recognition/',
+	'A.3.textToSpeech': 'https://console.ng.bluemix.net/catalog/services/text-to-speech/',
+	'A.4.bluemixTweets': 'https://console.ng.bluemix.net/catalog/services/insights-for-twitter/',
+    '_': 'https://jythonmusic.me/'
+};
+var editor;
+window.onload = function () {
+	editor = ace.edit("editor");
+	editor.setTheme("ace/theme/crimson_editor");
+	editor.setDisplayIndentGuides(true);
+	editor.getSession().setMode("ace/mode/python");
+	editor.getSession().selection.on('changeCursor', function(e) {
+		 if (markerId != null) {
+			editor.session.removeMarker(markerId);
+			markerId = null;
+		 }
+		 if (tooltip != null) {
+			tooltip.parentElement.removeChild(tooltip);
+			tooltip = null;
+		 }
+	});
+	document.getElementById("file-name").value = "";
+	editor.$blockScrolling = Infinity;
+	var init_param = location.search;
+	if (init_param.startsWith("?id=")) {
+		extSelectDocument(init_param.substring(4));
+		editor.focus();
+	} else {
+		showWelcome();
+	}
+};
+</script>
+    </div>
+</main>
+</body></html>
