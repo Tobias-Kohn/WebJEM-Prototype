@@ -17,10 +17,10 @@ The present _WebJEM_-Prototype grew out of a case study if the JEM environment c
 ## Frameworks
 
 The WebJEM project is based on, and requires, the following frameworks:
-- [Skulpt](http://www.skulpt.org/) ([GitHub](https://github.com/skulpt/skulpt)) is used to run Python code client-side (inside the browser).
+- [Skulpt](http://www.skulpt.org/) ([@GitHub](https://github.com/skulpt/skulpt)) is used to run Python code client-side (inside the browser).
 - [MIDI.js](https://github.com/mudcube/MIDI.js/) is a JavaScript-library for playing, and interacting with MIDI. It cannot only play MIDI sounds, but also supports connecting to external MIDI-devices.
 - [Soundfonts](https://github.com/gleitz/midi-js-soundfonts) is a collection of sound-fonts, necessary for MIDI to play various instruments.
-- [ACE](https://ace.c9.io/) ([GitHub](https://github.com/ajaxorg/ace)) is used as the browser-based editor of choice.
+- [ACE](https://ace.c9.io/) ([@GitHub](https://github.com/ajaxorg/ace)) is used as the browser-based editor of choice.
 
 
 ## Structure
@@ -32,5 +32,5 @@ The web application offers a set of examples of Python programs. In the original
 
 ## Contributors
 
-[Tobias Kohn](https://tobiaskohn.ch)
-[Bill Manaris](https://blogs.cofc.edu/manaris/)
+- [Tobias Kohn](https://tobiaskohn.ch)
+- [Bill Manaris](https://blogs.cofc.edu/manaris/)
