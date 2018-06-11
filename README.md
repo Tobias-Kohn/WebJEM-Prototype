@@ -22,6 +22,8 @@ The WebJEM project is based on, and requires, the following frameworks:
 - [MIDI.js Soundfonts](https://github.com/gleitz/midi-js-soundfonts) is a collection of sound-fonts, necessary for MIDI to play various instruments.
 - [ACE](https://ace.c9.io/) ([@GitHub](https://github.com/ajaxorg/ace)) is used as the browser-based editor of choice.
 
+In addition, we ware able to add and use libraries from [Processing.js](http://processingjs.org/), which, however, are not stricly part of the project itself.
+
 
 ## Structure
 
@@ -36,9 +38,9 @@ This folder contains the entire web application [as it is currently run](https:/
 The sources used for the project. This is mostly the libraries added to Skulpt, as well as some _glue code_ written in Scala. The Skulpt libraries need to be put into Skulpt's _Lib_-folder, before Skulpt is compiled to a JavaScript-library.
 
 
-## Acknowledgment
+## Acknowledgement
 
-The present WebJEM-project is part of a larger project, that was funded by IBM (US).
+The present WebJEM-project is part of a larger project, that was funded by [IBM (US)](https://www.ibm.com/).
 
 
 ## Contributors
